@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web1:
+    image: "chinaunicom/counter"
+    hostname: "wangxiang1"
+    ports:
+      - "5000:5000"
+
+  web2:
+    image: "chinaunicom/counter"
+    hostname: "wangxiang2"
+    ports:
+      - "5001:5001"
+
+  web3:
+    image: "chinaunicom/counter"
+    hostname: "wangxiang3"
+    ports:
+      - "5002:5002"
+
+  redis:
+    image: "redis:alpine"
+
+ # haproxy:
+ #   image: "chinaunicom/haproxy:1"
+ #   volumes:
+ #     - .:/etc/haproxy
+ #   ports:
+ #     - "8000:5555"
