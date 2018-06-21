@@ -22,7 +22,7 @@ services:
     image: "redis:alpine"
 
   haproxy:
-     build:"./haproxy/"
+     build: "./haproxy/"
      depends_on:
        - web1
      volumes:
